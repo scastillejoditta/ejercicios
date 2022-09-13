@@ -104,6 +104,7 @@ header {
     
 .header__content-logo { width: 60px; margin: 20px 5px;}
 
+
 .header__content-navbar {
     display: flex;
     flex-flow: row nowrap;
@@ -121,13 +122,34 @@ header {
     border-top: 1px #FEFE07 solid;
     cursor: pointer;
     height: 80px;
+    transition: .5s linear;
+}
+
+.header__content-navbar li 
+{
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.header__content-navbar li:active 
+{
+    transform: scale(0.9);
 }
 
 .header__content-navbar a:hover {
     background-color: #FFFF81;
     border-bottom: 10px #000 solid;
-    transition: .5s linear;
 }
+
+.header__content-navbar a:hover::after 
+{
+    content: '\00BB';
+    position: absolute;
+    left: 42%;
+    top:40%;
+    font-size: 30px;
+}
+
 
 h1 {font-family: 'Roboto bold'; font-size:3em; font-weight: bold; text-align: left; line-height: 1; margin-top: 5px;}
 h2 {font-family: 'Roboto bold'; font-size:2em; font-weight: bold; text-align: center;}
@@ -402,11 +424,11 @@ fieldset > label {
 {
     width: 100%;
     height: 15em;
-    background-size: cover;
+    background-size: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    overflow: hidden;
 }
-
 
 /* -- cards de equipo -- */
 /* ----- */
@@ -730,9 +752,38 @@ footer * { margin-top: 1em;}
 @media (max-width: 536px)
 {
     
-    .header__content-navbar 
+    /* .header__content-navbar 
     {
         display: none;
+    } */
+
+    .header__content-navbar {
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .header__content-navbar a {
+        display: inline_block;
+        height: 30px;
+        text-align: right;
+        min-width:120px;
+        margin: 3px 0 0 0;
+        padding: 0;
+        
+    }
+
+    .header__content-navbar a:hover {border: none; display: flex; align-items: center; justify-content: space-between;}
+    .header__content-navbar a:hover::after {content: '';}
+    .header__content-navbar a:hover::before 
+    {
+        content: '\00BB';
+        display: inline_block;
+        font-size: 30px;
+    }
+
+    .groupshare {
+        top: 50%;
     }
 }
 
