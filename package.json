@@ -1,0 +1,22 @@
+{
+  "name": "reportaje",
+  "version": "1.0.0",
+  "description": "Ejercicios de clase para aplicar en reportajes de datos.",
+  "main": "index.js",
+  "scripts": {
+    "build-sass": "node-sass --include-path scss ./scss/style.scss ./css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scastillejoditta/ejercicios.git"
+  },
+  "author": "Sara Castillejo Ditta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scastillejoditta/ejercicios/issues"
+  },
+  "homepage": "https://github.com/scastillejoditta/ejercicios#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
