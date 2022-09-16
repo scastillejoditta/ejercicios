@@ -1,0 +1,250 @@
+.apertura__imagen-imgcreditos { background-image: url("../assets/images/Portada_Reporteria.JPG");}
+
+/* -------------*/
+/* Formulario */
+
+.texto form {
+    margin-top: 2em;
+    accent-color: $amarillo;
+    font-family: 'Roboto regular', sans-serif;
+    text-align: left;
+}
+
+.texto form fieldset 
+{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 129, 60%);
+    border: none;
+}
+
+form fieldset:nth-child(1) > div {
+display: flex;
+flex-direction: row;
+justify-content: space-between;}
+
+fieldset > label {
+    width: 50%;
+}
+.texto form input, .texto form select {
+    width: 400px; 
+    margin: 5px; height: 25px; border-radius: 10px; border: #000 solid 1px; padding-left: 10px;}
+
+.texto form input[type="radio"], .texto form input[type="checkbox"]
+    {
+        width: 80px;
+    }
+.texto form textarea {width:95%; margin: 5px; border-radius: 10px; padding: 10px;}
+
+.texto form legend {
+    font-family: 'Roboto bold', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 70%);
+    color: #eee;
+    width: 200px;
+    border-radius: 10px;
+    padding:10px;
+    text-align: left;
+}
+
+.texto form button {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 100%);
+    color: #eee;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 5px;
+    text-transform: uppercase;
+    font-family: 'Roboto Bold', sans-serif;
+    cursor: pointer;
+}
+
+.texto form button:hover {
+    background-color: $amarillo;
+    color: #000;
+    border: none;
+}
+
+
+
+/* -- cards de equipo -- */
+/* ----- */
+.equipo__cards {
+    display: grid;
+    width: 90%;
+
+    grid-template-columns: repeat(4, 1fr);
+    
+    max-width: 1200px;
+    padding: 0 40px;
+    margin: 50px auto; /* esto solo funciona cuando va con el max-width o el width*/
+    justify-content: space-around;
+    align-items:center;
+}
+
+.equipo__card {
+    width: 16em;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 60%);
+    background-color: #000;
+    color: #eee;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.equipo__card-title {
+    font-family: 'Roboto bold';
+    font-size: 1.3em;
+    text-align: left;
+    color: $amarillo;
+    margin: 0;
+}
+
+.equipo__card-tag { 
+    position: absolute; 
+    top: -5px;
+    left: -5px; 
+    padding: 5px; 
+    color: #000; 
+    background-color: rgba(255, 255, 129, 80%); 
+    border-radius: 5px;
+    font-family: 'Roboto';
+    display: inline-block;
+    font-size: small;
+}
+
+.equipo__card-descrip {
+    margin: 0 5px;
+    line-height: 1;
+}
+
+.equipo__card-descrip p {
+    line-height: 1.5;
+    margin-top: 5px;
+    border-top: $amarillo solid 1px;
+    padding-top: 4px;
+}
+
+.equipo__card-img
+{
+    display: inline-block;
+    width: 11em;
+    height: 12em;
+    background-size: cover;
+    border-radius: 50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.equipo__card-navsocial
+{
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.equipo__card-navsocial img
+{
+    width: 20px;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.equipo__card-navsocial img:hover
+{
+    border: $amarillo solid 1px;
+}
+
+.parrilla_logos {
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.parrilla_logos img {
+    width: 150px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 1229px)
+{
+    .equipo__cards 
+    {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+
+@media (max-width: 977px)
+{
+    .equipo__cards 
+    {width: 100%;}
+    .texto {grid-template-columns: 5% auto 5%;}
+}
+
+@media (max-width: 849px)
+{
+
+    .equipo__cards 
+    {
+        grid-template-columns: repeat(2, 1fr);
+        width: 40em;
+    }
+ 
+}
+
+@media (max-width: 700px)
+{
+    .equipo__cards 
+    {width: 100%;}
+}
+
+@media (max-width: 604px)
+{
+    .equipo__cards 
+    {
+        grid-template-columns: repeat(1, 1fr);
+        width: 20em;
+    }
+}
+
+@media (max-width: 593px)
+{
+    form fieldset:nth-child(1) > div {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 485px)
+{
+    form, fieldset, .texto form input, .texto form select {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 323px)
+{
+    .equipo__cards 
+    {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+}

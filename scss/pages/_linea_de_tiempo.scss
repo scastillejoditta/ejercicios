@@ -1,0 +1,178 @@
+.apertura__imagen-imglineadetiempo 
+{ 
+    background-image: url("../assets/images/portada_guate.jpeg");
+}
+
+.gris {
+    background-color:ADACAC;
+    color: #ADACAC;
+    padding-top: 5em;
+    font-family: 'Roboto';
+    position: relative;
+   
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -200;
+      opacity: 0.03;
+      background-image: url("../assets/images/Mapa_LATAM.svg");
+      background-repeat: repeat-y;
+      background-size: 130%;
+      background-position: top right;
+  }
+}
+ 
+.posicion_encabezado 
+{
+    position: fixed;
+    top: 50px;
+    left: 0;
+}
+
+.row {
+    margin-top: 1em;
+}
+
+.header_pais div 
+{
+    margin-top: 2em;
+    background-color: black ;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.header_pais div p 
+{
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.datos_guerras div p
+{
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    line-height: 140%;
+}
+
+.datos_guerras div p:nth-child(1) 
+{
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.datos_guerras div p:nth-child(2) 
+{
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+
+
+.hito p, .hito a { 
+    color: #585856;
+    line-height: 160%;
+    
+}
+
+.hito a {
+    display: none;
+    text-decoration: none;
+    border-bottom: #FFFF81 solid 2px;
+    padding-bottom: 0.5px;
+    padding-top: 10%;
+    margin-bottom: 10%;
+}
+
+.hito {
+    background-color: rgba(255, 255, 255, 30%);
+    font-family: 'Roboto';
+    font-size: 0.8em;
+    transition: all 1s;
+}
+
+.hito:hover {    
+    cursor: pointer;
+}
+
+.hito:hover > a {
+    display: block;
+}
+
+.hito:hover > p {
+    display: none;
+    
+}
+
+.hito_vacio {
+    background-color: transparent;
+}
+
+.anio {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+    font-family: 'Roboto';
+ font-size: 1.2em;
+ text-align: center;
+ color: #000;   
+}
+
+.anio span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: #000 solid 1px;
+    margin-bottom: 0.1em;
+    margin-right: 0.3em;
+}
+
+.tag {
+  line-height: 100%;
+  font-size: 1em;
+  color: white;
+  padding: 3px 10px 3px 10px;
+  border-radius: 5px;
+}
+
+.t1 {
+    background-color: #ff0040;
+  }
+  .t2 {
+    background-color: #000000;
+  }
+  .t3 {
+    background-color: #2e9afe;
+  }
+  .t4 {
+    background-color: #fe9a2e;
+  }
+  .t5 {
+    background-color: #ff05f7;
+  }
+  .t6 {
+    background-color: #d00404;
+  }
+  .t7 {
+    background-color: #6a0888;
+  }
+  .t8 {
+    background-color: #610b38;
+  }
+  .t9 {
+    background-color: #fad103;
+  }
+  .t10 {
+    background-color: #088a4b;
+  }

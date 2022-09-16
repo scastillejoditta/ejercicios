@@ -1,0 +1,12 @@
+// components
+@import './components/variables'; //Siempre arriba de todo
+
+@import './components/global';
+@import './components/header';
+
+// pages
+@import './pages/index';
+@import './pages/creditos';
+@import './pages/articulo';
+@import './pages/mapa';
+@import './pages/linea_de_tiempo';

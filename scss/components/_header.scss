@@ -1,0 +1,119 @@
+
+/* -------------*/
+/* Encabezado */
+
+.header 
+{
+    position:sticky; 
+    top: 0; 
+    background-color: #fff; 
+    z-index: 1; 
+    padding: 0 20px;
+    font-family: 'Roboto light', sans-serif;
+    font-weight: bold;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 60%);
+
+    // .header__content
+    &__content 
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        // .header__content-logo
+        &-logo 
+        { 
+            width: 60px; 
+            margin: 20px 5px;
+        }
+
+        // .header__content-navbar
+        &-navbar 
+        {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+
+            a 
+            { 
+                display: inline-block;
+                margin: 0 10px; 
+                color: #000; 
+                font-weight: bold;
+                padding: 5px 10px;
+                border: none;
+                border-top: 1px $amarillo solid;
+                cursor: pointer;
+                height: 80px;
+                transition: .5s linear;
+
+                &:hover {
+                    background-color: $amarillo;
+                    border-bottom: 10px #000 solid;
+                
+                    &::after 
+                    {
+                        content: '\00BB';
+                        position: absolute;
+                        left: 42%;
+                        top:40%;
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            li 
+            {
+                transition: transform 0.3s;
+                position: relative;
+
+                &:active 
+                {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
+
+
+h1 {font-family: 'Roboto bold'; font-size:3em; font-weight: bold; text-align: left; line-height: 1; margin-top: 5px;}
+h2 {font-family: 'Roboto bold'; font-size:2em; font-weight: bold; text-align: center;}
+h3 {font-family: 'Roboto bold';}
+
+
+@media (max-width: 536px)
+{
+    
+    /* .header__content-navbar 
+    {
+        display: none;
+    } */
+
+    .header__content-navbar {
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .header__content-navbar a {
+        display: inline_block;
+        height: 30px;
+        text-align: right;
+        min-width:120px;
+        margin: 3px 0 0 0;
+        padding: 0;
+        
+    }
+
+    .header__content-navbar a:hover {border: none; display: flex; align-items: center; justify-content: space-between;}
+    .header__content-navbar a:hover::after {content: '';}
+    .header__content-navbar a:hover::before 
+    {
+        content: '\00BB';
+        display: inline_block;
+        font-size: 30px;
+    }
+
+}
