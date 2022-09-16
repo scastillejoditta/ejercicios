@@ -33,7 +33,8 @@
     padding: 0 20px;
 }
 
-.card {
+.card
+{
     width: 22em;
     padding: 3px;
     border-radius: 10px;
@@ -43,60 +44,68 @@
     cursor: pointer;
     height: 28em;
 
+    //card__header
     &__header 
     {
         position: relative;
 
-        &-img
-        {
-                width: 100%;
-                height: 15em;
-                background-size: 100%;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-                overflow: hidden;
-        }
+        // span 
+        // {
+        //     position: absolute;
+        //     top: -24px;
+        //     width: 100%;
+        //     display:block;
+        //     height: 15em;
+        //     background-color: $NegroOpaco;
+        // }
 
-        span 
+        //card__header-img
+        &-img 
         {
             position: absolute;
             top: -24px;
             width: 100%;
             display:block;
             height: 15em;
-            background-color: rgba(0, 0, 0, 40%);
         }
 
-        &-tag { 
+        //card__header-tag
+        &-tag 
+        { 
             position: absolute; 
             top: 0;
             left: 0; 
             padding: 5px; 
             color: #000; 
-            background-color: rgba(255, 255, 129, 80%); 
+            background-color: rgba(255, 255, 129, .8); 
             border-radius: 5px;
             font-family: 'Roboto';
             display: inline-block;
             font-size: small;
             border-bottom-left-radius: 0;
         }
-    }
 
-    &__title {
-        position: absolute; 
-        top: 145px; 
-        left: 5px;
-        font-family: 'Roboto bold';
-        font-size: 1.5em;
-        text-align: left;
-        color: #fff;
+        //card__header-title
+        &-title 
+        {
+            position: absolute; 
+            top: 100px; 
+            left: 5px;
+            font-family: 'Roboto bold';
+            font-size: 1em;
+            text-align: left;
+            color: #fff;
+        }
+
+       
     }
 
     &__descrip 
     {
         margin: 20px;
         line-height: 1;
-
+        color: #fff;
+        
         p
         {
             line-height: 1.5;
@@ -119,7 +128,12 @@
         }
     }
 }
- 
+
+
+.imgarticulo { background-image: url("../assets/images/portada_peru.jpg");}
+.imgmapa { background-image: url("../assets/images/portada_peru.jpg");}
+.imglinea { background-image: url("../assets/images/portada_peru.jpg");}
+
 .DataAnalisis {
     display: flex;
     column-gap: 30px;
