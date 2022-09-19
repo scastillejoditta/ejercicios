@@ -120,7 +120,7 @@ body {
   top: 30%;
   left: 10%;
   color: #eee;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px; }
   .apertura_titular p {
@@ -233,7 +233,7 @@ body {
   padding: 0 20px;
   font-family: 'Roboto light', sans-serif;
   font-weight: bold;
-  box-shadow: 0 25px 50px -12px black; }
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); }
   .header__content {
     display: flex;
     justify-content: space-between;
@@ -356,44 +356,41 @@ h3 {
   cursor: pointer;
   height: 28em; }
   .card__header {
-    position: relative; }
+    position: relative;
+    height: 15em; }
     .card__header-img {
-      width: 100%;
-      height: 15em;
-      background-size: 100%;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      overflow: hidden; }
-    .card__header span {
       position: absolute;
-      top: -24px;
+      top: 0px;
       width: 100%;
       display: block;
       height: 15em;
-      background-color: black; }
+      opacity: .7;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden; }
     .card__header-tag {
       position: absolute;
       top: 0;
       left: 0;
       padding: 5px;
       color: #000;
-      background-color: #ffff81;
+      background-color: rgba(255, 255, 129, 0.8);
       border-radius: 5px;
       font-family: 'Roboto';
       display: inline-block;
       font-size: small;
       border-bottom-left-radius: 0; }
-  .card__title {
-    position: absolute;
-    top: 145px;
-    left: 5px;
-    font-family: 'Roboto bold';
-    font-size: 1.5em;
-    text-align: left;
-    color: #fff; }
+    .card__header-title {
+      position: absolute;
+      top: 60%;
+      left: 5px;
+      font-family: 'Roboto bold';
+      font-size: 1.5em;
+      text-align: left;
+      color: #fff; }
   .card__descrip {
     margin: 20px;
-    line-height: 1; }
+    line-height: 1;
+    color: #fff; }
     .card__descrip p {
       line-height: 1.5;
       margin-top: 10px; }
@@ -406,6 +403,15 @@ h3 {
       color: #ffff81;
       font-family: 'Roboto';
       margin-left: 5px; }
+
+.imgarticulo {
+  background-image: url("../assets/images/portada_peru.jpg"); }
+
+.imgmapa {
+  background-image: url("../assets/images/portada_peru.jpg"); }
+
+.imglinea {
+  background-image: url("../assets/images/portada_peru.jpg"); }
 
 .DataAnalisis {
   display: flex;

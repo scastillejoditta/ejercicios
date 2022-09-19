@@ -48,25 +48,19 @@
     &__header 
     {
         position: relative;
-
-        // span 
-        // {
-        //     position: absolute;
-        //     top: -24px;
-        //     width: 100%;
-        //     display:block;
-        //     height: 15em;
-        //     background-color: $NegroOpaco;
-        // }
+        height: 15em;
 
         //card__header-img
         &-img 
         {
             position: absolute;
-            top: -24px;
+            top: 0px;
             width: 100%;
             display:block;
             height: 15em;
+            opacity: .7;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
         }
 
         //card__header-tag
@@ -89,10 +83,10 @@
         &-title 
         {
             position: absolute; 
-            top: 100px; 
+            top: 60%; 
             left: 5px;
             font-family: 'Roboto bold';
-            font-size: 1em;
+            font-size: 1.5em;
             text-align: left;
             color: #fff;
         }
