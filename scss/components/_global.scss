@@ -108,9 +108,16 @@ body {
     padding-top: 100px;
     padding-bottom: 100px;
 
+
     div  
     {
         grid-area: piezas;
+    }
+
+    h2 
+    {
+        font-size: 2.5em;
+        margin-top: 10px;
     }
 
     img 
@@ -119,6 +126,42 @@ body {
         padding: 5px; 
         border-radius: 10px;
         width: 100%;
+    }
+
+    &__autor
+    {
+        margin: 4em 0 3em 0;
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+        align-items: center;
+
+        &-img 
+        {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-image: url('/assets/images/equipo1.jpg');
+            background-size: cover;
+        }
+
+        &-filas 
+        {
+            margin-left: 1em;
+            font-size: 0.8em;
+            color: #949394;
+            font-family: 'Roboto';
+            
+            div {height: 20px;}
+            span {
+                margin: 0;
+                a 
+                {
+                 color: #949394;
+                 border-bottom: #FFFF81 solid 2px;   
+                }
+            }
+        }
     }
 
     &__pie 
@@ -130,11 +173,15 @@ body {
     }
 }
 
+.texto__autor-filas a:hover::after 
+    {
+        content: ' \2197';
+        display: inline_block;
+    }
 .encabezado_section {
-    display: block;
-    max-width: 1200px;
-    padding: 0 40px;
-    margin: 50px auto 30px auto;
+    padding-top: 5em;
+    max-width:1200px;
+    margin:0 auto;
 }
 
 /* -------------*/

@@ -36,13 +36,18 @@
 .card
 {
     width: 22em;
+    height: 28em;
     padding: 3px;
     border-radius: 10px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 60%);
     background-color: #000;
     color: #eee;
-    cursor: pointer;
-    height: 28em;
+    transition: all .8s;
+
+    &:hover 
+    {
+        border-color: #eee;
+    }
 
     //card__header
     &__header 
@@ -121,6 +126,8 @@
             margin-left: 5px;
         }
     }
+
+    
 }
 
 
