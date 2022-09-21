@@ -700,7 +700,7 @@ fieldset > label {
     width: 100%; } }
 
 .apertura__imagen-imgarticulo {
-  background-image: url("assets/images/machoraton.jfif"); }
+  background-image: url("../assets/images/machoraton.jfif"); }
 
 .texto__autor-img {
   background-image: url("assets/images/equipo2.jpg"); }
@@ -802,7 +802,7 @@ table {
   padding-bottom: 0.2em; }
 
 .apertura__imagen-imgmapa {
-  background-image: url("assets/images/exodo_venezolano.jpg"); }
+  background-image: url("../assets/images/exodo_venezolano.jpg"); }
 
 .cls-1 {
   opacity: .12;
