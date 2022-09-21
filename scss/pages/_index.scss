@@ -21,6 +21,8 @@
     border: none;
 }
 
+.texto__autor-img { background-image: url("../assets/images/equipo1.jpg");}
+
 /* -------------*/
 /* tarjetas */
 
@@ -136,7 +138,7 @@
 .imglinea { background-image: url("../assets/images/portada_peru.jpg");}
 
 .DataAnalisis {
-    display: flex;
+    @include flex_contenedor (auto, auto, true);
     column-gap: 30px;
     margin: 0 auto;
     width: 90%;

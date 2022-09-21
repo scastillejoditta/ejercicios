@@ -16,9 +16,10 @@
     // .header__content
     &__content 
     {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex_contenedor (center, space-between, true);
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
         
         // .header__content-logo
         &-logo 
@@ -30,10 +31,8 @@
         // .header__content-navbar
         &-navbar 
         {
-            display: flex;
+            @include flex_contenedor (center, center, true);
             flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
 
             a 
             { 
@@ -85,16 +84,9 @@ h3 {font-family: 'Roboto bold';}
 
 @media (max-width: 536px)
 {
-    
-    /* .header__content-navbar 
-    {
-        display: none;
-    } */
 
     .header__content-navbar {
-        flex-flow: column;
-        justify-content: flex-start;
-        align-items: flex-end;
+        @include flex_contenedor (flex-end, flex-start, false);
     }
 
     .header__content-navbar a {

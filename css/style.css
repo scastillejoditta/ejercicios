@@ -48,17 +48,6 @@ body {
   src: url("../assets/fonts/Domine/static/Domine-Bold.ttf");
   font-weight: bold; }
 
-.letracapital {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  font-size: 30px;
-  background-color: #000;
-  color: #fff;
-  margin: 5px 5px 0 0;
-  padding: -5px;
-  vertical-align: text-top; }
-
 .primerparrafo::first-letter {
   padding: 0 .3rem;
   margin: 0 .3rem 0 0;
@@ -113,7 +102,6 @@ body {
       height: 60px;
       width: 60px;
       border-radius: 50%;
-      background-image: url("/assets/images/equipo1.jpg");
       background-size: cover; }
     .texto__autor-filas {
       margin-left: 1em;
@@ -203,19 +191,6 @@ body {
 
 /* -------------*/
 /* Footer */
-.footer {
-  display: flex;
-  padding: 30px 20px;
-  flex-flow: column wrap;
-  align-items: center;
-  background-color: #000;
-  color: #eee;
-  margin: 0; }
-  .footer * {
-    margin-top: 1em; }
-  .footer__leyenda {
-    width: 90%; }
-
 @media (max-width: 922px) {
   .apertura_titular {
     height: 100%;
@@ -266,16 +241,18 @@ body {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); }
   .header__content {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center; }
+    flex-direction: row; }
     .header__content-logo {
       width: 60px;
       margin: 20px 5px; }
     .header__content-navbar {
       display: flex;
-      flex-flow: row nowrap;
+      align-items: center;
       justify-content: center;
-      align-items: center; }
+      flex-direction: row;
+      flex-flow: row nowrap; }
       .header__content-navbar a {
         display: inline-block;
         margin: 0 10px;
@@ -320,14 +297,11 @@ h3 {
   font-family: 'Roboto bold'; }
 
 @media (max-width: 536px) {
-  /* .header__content-navbar 
-    {
-        display: none;
-    } */
   .header__content-navbar {
-    flex-flow: column;
+    display: flex;
+    align-items: flex-end;
     justify-content: flex-start;
-    align-items: flex-end; }
+    flex-direction: column; }
   .header__content-navbar a {
     display: inline_block;
     height: 30px;
@@ -347,6 +321,21 @@ h3 {
     display: inline_block;
     font-size: 30px; } }
 
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: auto;
+  flex-direction: column;
+  padding: 30px 20px;
+  background-color: #000;
+  color: #eee;
+  margin: 0; }
+  .footer * {
+    margin-top: 1em; }
+  .footer__leyenda {
+    width: 90%;
+    text-align: center; }
+
 /* video */
 .apertura__video {
   min-width: 100%;
@@ -364,6 +353,9 @@ h3 {
   top: 0;
   left: 0;
   border: none; }
+
+.texto__autor-img {
+  background-image: url("../assets/images/equipo1.jpg"); }
 
 /* -------------*/
 /* tarjetas */
@@ -447,6 +439,9 @@ h3 {
 
 .DataAnalisis {
   display: flex;
+  align-items: auto;
+  justify-content: auto;
+  flex-direction: row;
   column-gap: 30px;
   margin: 0 auto;
   width: 90%;
@@ -505,20 +500,22 @@ h3 {
   text-align: left; }
 
 .texto form fieldset {
+  display: flex;
+  align-items: auto;
+  justify-content: space-around;
+  flex-direction: column;
   width: 100%;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   background-color: #ffff81;
   border: none; }
 
 form fieldset:nth-child(1) > div {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
+  align-items: auto;
+  justify-content: space-between;
+  flex-direction: row; }
 
 fieldset > label {
   width: 50%; }
@@ -583,74 +580,81 @@ fieldset > label {
   align-items: center; }
 
 .equipo__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 16em;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 25px 50px -12px black;
   background-color: #000;
   color: #eee;
-  margin-top: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.equipo__card-title {
-  font-family: 'Roboto bold';
-  font-size: 1.3em;
-  text-align: left;
-  color: #FEFE07;
-  margin: 0; }
-
-.equipo__card-tag {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  padding: 5px;
-  color: #000;
-  background-color: #ffff81;
-  border-radius: 5px;
-  font-family: 'Roboto';
-  display: inline-block;
-  font-size: small; }
-
-.equipo__card-descrip {
-  margin: 0 5px;
-  line-height: 1; }
-
-.equipo__card-descrip p {
-  line-height: 1.5;
-  margin-top: 5px;
-  border-top: #FEFE07 solid 1px;
-  padding-top: 4px; }
-
-.equipo__card-img {
-  display: inline-block;
-  width: 11em;
-  height: 12em;
-  background-size: cover;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto; }
-
-.equipo__card-navsocial {
-  display: inline-flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center; }
-
-.equipo__card-navsocial img {
-  width: 20px;
-  border-radius: 50%;
-  margin: 0 2px; }
-
-.equipo__card-navsocial img:hover {
-  border: #FEFE07 solid 1px; }
+  margin-top: 2em; }
+  .equipo__card-header {
+    position: relative; }
+  .equipo__card-title {
+    font-family: 'Roboto bold';
+    font-size: 1.3em;
+    text-align: left;
+    color: #FEFE07;
+    margin: 0; }
+  .equipo__card-tag {
+    display: inline-block;
+    position: absolute;
+    top: -5px;
+    left: -35px;
+    padding: 5px;
+    color: #000;
+    background-color: #ffff81;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-size: small; }
+  .equipo__card-descrip {
+    margin: 0 5px;
+    line-height: 1; }
+    .equipo__card-descrip p {
+      line-height: 1.5;
+      margin-top: 5px;
+      border-top: #FEFE07 solid 1px;
+      padding-top: 4px; }
+  .equipo__card-img {
+    display: inline-block;
+    width: 11em;
+    height: 11em;
+    background-size: cover;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto; }
+  .equipo__card-navsocial {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center; }
+    .equipo__card-navsocial .bi-twitter {
+      color: #eee;
+      font-size: 15px;
+      margin-left: 10px; }
+      .equipo__card-navsocial .bi-twitter:hover {
+        color: #09EEDD; }
+    .equipo__card-navsocial .bi-linkedin {
+      color: #eee;
+      font-size: 15px;
+      margin-left: 10px; }
+      .equipo__card-navsocial .bi-linkedin:hover {
+        color: #08ADC4; }
+    .equipo__card-navsocial .bi-envelope {
+      color: #eee;
+      font-size: 15px;
+      margin-left: 10px; }
+      .equipo__card-navsocial .bi-envelope:hover {
+        color: #EE6309; }
 
 .parrilla_logos {
   display: flex;
-  flex-flow: row wrap;
+  align-items: center;
   justify-content: center;
+  flex-direction: row;
   margin-bottom: 100px; }
 
 .parrilla_logos img {
@@ -696,7 +700,10 @@ fieldset > label {
     width: 100%; } }
 
 .apertura__imagen-imgarticulo {
-  background-image: url("/assets/images/machoraton.jfif"); }
+  background-image: url("../assets/images/machoraton.jfif"); }
+
+.texto__autor-img {
+  background-image: url("../assets/images/equipo2.jpg"); }
 
 .texto > h2 {
   margin-top: 3em;
@@ -980,6 +987,9 @@ svg {
 .apertura__imagen-imglineadetiempo {
   background-image: url("../assets/images/portada_guate.jpeg"); }
 
+.texto__autor-img {
+  background-image: url("../assets/images/equipo3.jpg"); }
+
 .gris {
   background-color: ADACAC;
   color: #ADACAC;
@@ -1071,6 +1081,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   font-family: 'Roboto';
   font-size: 1.2em;
   text-align: center;

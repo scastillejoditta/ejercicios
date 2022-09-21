@@ -1,0 +1,14 @@
+.footer {
+    @include flex_contenedor(center, auto, false);
+    padding: 30px 20px;
+    background-color: #000;
+    color: #eee;
+    margin: 0;
+
+    * { margin-top: 1em;}
+
+    &__leyenda {
+        width: 90%;
+        text-align: center;
+    }
+}

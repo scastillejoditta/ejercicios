@@ -3,6 +3,8 @@
     background-image: url("../assets/images/portada_guate.jpeg");
 }
 
+.texto__autor-img { background-image: url("../assets/images/equipo3.jpg");}
+
 .gris {
     background-color:ADACAC;
     color: #ADACAC;
@@ -119,10 +121,8 @@
 }
 
 .anio {
- display: flex;
- align-items: center;
- justify-content: center;
-    font-family: 'Roboto';
+ @include flex_contenedor (center, center, true);
+ font-family: 'Roboto';
  font-size: 1.2em;
  text-align: center;
  color: #000;   

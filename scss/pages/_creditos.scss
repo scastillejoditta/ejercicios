@@ -12,21 +12,19 @@
 
 .texto form fieldset 
 {
+    @include flex_contenedor (auto, space-around, false);
+
     width: 100%;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     background-color: rgba(255, 255, 129, 60%);
     border: none;
 }
 
 form fieldset:nth-child(1) > div {
-display: flex;
-flex-direction: row;
-justify-content: space-between;}
+    @include flex_contenedor (auto, space-between, true);
+}
 
 fieldset > label {
     width: 50%;
@@ -91,6 +89,9 @@ fieldset > label {
 }
 
 .equipo__card {
+    @include flex_contenedor (center, center, false);
+    // flex-direction: column;
+
     width: 16em;
     padding: 10px;
     border-radius: 10px;
@@ -98,81 +99,93 @@ fieldset > label {
     background-color: #000;
     color: #eee;
     margin-top: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
+    &-header {
+        position: relative;
+    }
+    
+    &-title {
+        font-family: 'Roboto bold';
+        font-size: 1.3em;
+        text-align: left;
+        color: $amarillo;
+        margin: 0;
+    }
+    &-tag { 
+        display: inline-block;
+        position: absolute; 
+        top: -5px;
+        left: -35px; 
+        padding: 5px; 
+        color: #000; 
+        background-color: rgba(255, 255, 129, 80%); 
+        border-radius: 5px;
+        font-family: 'Roboto';
+        
+        font-size: small;
+    }
+
+    &-descrip {
+        margin: 0 5px;
+        line-height: 1;
+
+        p {
+            line-height: 1.5;
+            margin-top: 5px;
+            border-top: $amarillo solid 1px;
+            padding-top: 4px;
+        }
+    }
+
+    &-img
+    {
+        display: inline-block;
+        width: 11em;
+        height: 11em;
+        background-size: cover;
+        border-radius: 50%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    &-navsocial
+    {
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content:space-evenly;
+        align-items: center;
+
+    
+            //mapa
+            $iconos:(
+                twitter: #09EEDD,
+                linkedin: #08ADC4,
+                envelope: #EE6309,
+            );
+
+            //ciclo
+            @each $nameRed, $color in $iconos 
+            {
+                .bi-#{$nameRed} {
+                    color: #eee;
+                    font-size: 15px;
+                    margin-left: 10px;
+
+                    &:hover {
+                        color: $color;
+                    }
+                }
+    
+        }
+    }
 
 
-.equipo__card-title {
-    font-family: 'Roboto bold';
-    font-size: 1.3em;
-    text-align: left;
-    color: $amarillo;
-    margin: 0;
 }
 
-.equipo__card-tag { 
-    position: absolute; 
-    top: -5px;
-    left: -5px; 
-    padding: 5px; 
-    color: #000; 
-    background-color: rgba(255, 255, 129, 80%); 
-    border-radius: 5px;
-    font-family: 'Roboto';
-    display: inline-block;
-    font-size: small;
-}
-
-.equipo__card-descrip {
-    margin: 0 5px;
-    line-height: 1;
-}
-
-.equipo__card-descrip p {
-    line-height: 1.5;
-    margin-top: 5px;
-    border-top: $amarillo solid 1px;
-    padding-top: 4px;
-}
-
-.equipo__card-img
-{
-    display: inline-block;
-    width: 11em;
-    height: 12em;
-    background-size: cover;
-    border-radius: 50%;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.equipo__card-navsocial
-{
-    display: inline-flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.equipo__card-navsocial img
-{
-    width: 20px;
-    border-radius: 50%;
-    margin: 0 2px;
-}
-
-.equipo__card-navsocial img:hover
-{
-    border: $amarillo solid 1px;
-}
 
 .parrilla_logos {
-    display: flex; 
-    flex-flow: row wrap;
-    justify-content: center;
+    @include flex_contenedor (center, center, true);
+    // flex-flow: row wrap;
     margin-bottom: 100px;
 }
 
