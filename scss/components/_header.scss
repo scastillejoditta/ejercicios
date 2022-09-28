@@ -82,9 +82,14 @@ h2 {font-family: 'Roboto bold'; font-size:2em; font-weight: bold; text-align: ce
 h3 {font-family: 'Roboto bold';}
 
 
-@media (max-width: 536px)
+@media (max-width: 700px)
 {
 
+    h1 
+    {
+        text-align: center;
+    }
+    
     .header__content-navbar {
         @include flex_contenedor (flex-end, flex-start, false);
     }

@@ -185,7 +185,7 @@ fieldset > label {
 
 .parrilla_logos {
     @include flex_contenedor (center, center, true);
-    // flex-flow: row wrap;
+    flex-flow: row wrap;
     margin-bottom: 100px;
 }
 

@@ -292,9 +292,10 @@ body {
     justify-content: center;
     border-radius: 0%;
     }
+
     .groupshare 
     {
-        top: 20%;
+        top: 25%;
     }
 }
 
@@ -325,10 +326,6 @@ body {
         text-align: center;
     }
 
-}
-
-@media (max-width: 536px)
-{
     .groupshare {
         top: 50%;
     }

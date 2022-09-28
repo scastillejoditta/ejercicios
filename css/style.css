@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* -------------*/
 /* inicializar propiedades*/
 * {
@@ -203,7 +204,7 @@ body {
     justify-content: center;
     border-radius: 0%; }
   .groupshare {
-    top: 20%; } }
+    top: 25%; } }
 
 @media (max-width: 700px) {
   .apertura__imagen, .apertura__video {
@@ -222,9 +223,7 @@ body {
     gap: 20px;
     padding-bottom: 50px; }
   h1 {
-    text-align: center; } }
-
-@media (max-width: 536px) {
+    text-align: center; }
   .groupshare {
     top: 50%; } }
 
@@ -296,7 +295,9 @@ h2 {
 h3 {
   font-family: 'Roboto bold'; }
 
-@media (max-width: 536px) {
+@media (max-width: 700px) {
+  h1 {
+    text-align: center; }
   .header__content-navbar {
     display: flex;
     align-items: flex-end;
@@ -473,11 +474,11 @@ h3 {
   .apertura__video {
     position: static;
     padding-top: 0; }
-  .apertura__video-iframe {
-    position: static;
-    height: 40%;
-    border: none;
-    margin: 0; } }
+    .apertura__video-iframe {
+      position: static;
+      height: 40%;
+      border: none;
+      margin: 0; } }
 
 @media (max-width: 485px) {
   .cards {
@@ -655,6 +656,7 @@ fieldset > label {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  flex-flow: row wrap;
   margin-bottom: 100px; }
 
 .parrilla_logos img {
@@ -804,15 +806,15 @@ table {
 .apertura__imagen-imgmapa {
   background-image: url("../assets/images/exodo_venezolano.jpg"); }
 
+/* Latinoamérica */
 .cls-1 {
-  opacity: .12;
-  fill: #000;
+  fill: #fff;
   animation: Latam .8s 10s ease 1 forwards; }
 
 @keyframes Latam {
   from {
     fill: transparent;
-    stroke: #000;
+    stroke: #fff;
     stroke-width: 4px;
     stroke-dasharray: 1700;
     stroke-dashoffset: 1700; }
@@ -821,7 +823,7 @@ table {
 
 .cls-4 {
   fill: transparent;
-  stroke: #e34038;
+  stroke: #000;
   stroke-width: 15px;
   stroke-dasharray: 750;
   stroke-dashoffset: 750;
@@ -847,20 +849,20 @@ table {
 
 @keyframes cerrar_pais {
   0% {
-    fill: #000;
+    fill: #fff;
     opacity: .12; }
   100% {
-    fill: #d5f84a;
+    fill: #FEFE07;
     opacity: 1; } }
 
+/* USA */
 .cls-5 {
-  fill: #000;
-  opacity: .12;
+  fill: #fff;
   animation: cerrar_pais .8s 9.5s ease 1 forwards; }
 
 /* puntos */
 .cls-6 {
-  fill: #d5f84a;
+  fill: #FEFE07;
   opacity: 0;
   cursor: pointer; }
 
@@ -882,13 +884,14 @@ table {
   100% {
     transform: scale(1); } }
 
+/* Nube */
 .cls-8 {
-  fill: #0c4ed3;
+  fill: #00d4ff;
   opacity: 0;
   animation: aparecer 2s 13.5s ease 2 forwards; }
 
 .cls-6, .cls-10 {
-  stroke: #fff;
+  stroke: #000;
   stroke-miterlimit: 10;
   stroke-width: 4px; }
 
@@ -966,23 +969,23 @@ table {
   fill-rule: evenodd; }
 
 .cls-12 {
-  fill: #d6fa48;
+  fill: #FEFE07;
   opacity: 0; }
 
 .cls-2 {
-  fill: #0048d8;
+  fill: #00d4ff;
   opacity: 0; }
 
 .cls-3 {
-  fill: #d8fc3f;
+  fill: #FEFE07;
   opacity: 0; }
 
 .cls-7 {
-  fill: #0c4ed3;
+  fill: #00d4ff;
   opacity: 0; }
 
 svg {
-  background-color: #18a477; }
+  background-color: #00d4ff; }
 
 .apertura__imagen-imglineadetiempo {
   background-image: url("../assets/images/portada_guate.jpeg"); }
