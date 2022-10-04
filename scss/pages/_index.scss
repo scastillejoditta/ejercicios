@@ -21,7 +21,13 @@
     border: none;
 }
 
-.texto__autor-img { background-image: url("assets/images/equipo1.jpg");}
+//ciclo
+@each $autor, $foto in $autores 
+{
+    .img-#{$autor} {
+        background-image: $foto;
+    }
+}
 
 /* -------------*/
 /* tarjetas */

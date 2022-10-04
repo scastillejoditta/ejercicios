@@ -3,7 +3,13 @@
     background-image: url("../assets/images/portada_guate.jpeg");
 }
 
-.texto__autor-img { background-image: url("../assets/images/equipo3.jpg");}
+//ciclo
+@each $autor, $foto in $autores 
+{
+    .img-#{$autor} {
+        background-image: $foto;
+    }
+}
 
 .gris {
     background-color:ADACAC;
@@ -79,41 +85,45 @@
     margin-bottom: 1em;
 }
 
-
-
-.hito p, .hito a { 
-    color: #585856;
-    line-height: 160%;
-    
-}
-
-.hito a {
-    display: none;
-    text-decoration: none;
-    border-bottom: #FFFF81 solid 2px;
-    padding-bottom: 0.5px;
-    padding-top: 10%;
-    margin-bottom: 10%;
-}
-
 .hito {
     background-color: rgba(255, 255, 255, 30%);
     font-family: 'Roboto';
     font-size: 0.8em;
     transition: all 1s;
-}
 
-.hito:hover {    
-    cursor: pointer;
-}
+    &:hover 
+    {    
+      cursor: pointer;
+     
+      a 
+      {
+        display: block;
+      }
 
-.hito:hover > a {
-    display: block;
-}
+      p 
+      {
+        display: none;
+      }
+    }
 
-.hito:hover > p {
-    display: none;
-    
+    a 
+    {
+      color: #585856;
+      line-height: 160%;
+   
+      display: none;
+      text-decoration: none;
+      border-bottom: #FFFF81 solid 2px;
+      padding-bottom: 0.5px;
+      padding-top: 10%;
+      margin-bottom: 10%;
+    }
+
+    p 
+    {
+      color: #585856;
+      line-height: 160%;
+    }
 }
 
 .hito_vacio {
@@ -144,6 +154,8 @@
   color: white;
   padding: 3px 10px 3px 10px;
   border-radius: 5px;
+  display: inline-block;
+  margin-top: 0;;
 }
 
 .t1 {

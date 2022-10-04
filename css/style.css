@@ -62,7 +62,8 @@ body {
   border-radius: 5px;
   font-family: 'Roboto';
   display: inline-block;
-  font-size: small; }
+  font-size: small;
+  margin-top: 3px; }
 
 .blanco {
   background-color: #fff; }
@@ -355,8 +356,14 @@ h3 {
   left: 0;
   border: none; }
 
-.texto__autor-img {
-  background-image: url("assets/images/equipo1.jpg"); }
+.img-primero {
+  background-image: url("/assets/images/equipo1.jpg"); }
+
+.img-segundo {
+  background-image: url("/assets/images/equipo2.jpg"); }
+
+.img-tercero {
+  background-image: url("/assets/images/equipo3.jpg"); }
 
 /* -------------*/
 /* tarjetas */
@@ -705,7 +712,7 @@ fieldset > label {
   background-image: url("../assets/images/machoraton.jfif"); }
 
 .texto__autor-img {
-  background-image: url("assets/images/equipo2.jpg"); }
+  background-image: url("../assets/images/equipo2.jpg"); }
 
 .texto > h2 {
   margin-top: 3em;
@@ -717,6 +724,12 @@ fieldset > label {
 #VizPrimera {
   width: 100%;
   text-align: center; }
+
+.label {
+  font-size: 2em;
+  font-family: 'Roboto light';
+  fill: #A4061E;
+  font-weight: bold; }
 
 table {
   margin-left: auto;
@@ -990,8 +1003,14 @@ svg {
 .apertura__imagen-imglineadetiempo {
   background-image: url("../assets/images/portada_guate.jpeg"); }
 
-.texto__autor-img {
-  background-image: url("../assets/images/equipo3.jpg"); }
+.img-primero {
+  background-image: url("/assets/images/equipo1.jpg"); }
+
+.img-segundo {
+  background-image: url("/assets/images/equipo2.jpg"); }
+
+.img-tercero {
+  background-image: url("/assets/images/equipo3.jpg"); }
 
 .gris {
   background-color: ADACAC;
@@ -1050,32 +1069,29 @@ svg {
   font-size: 0.9em;
   margin-bottom: 1em; }
 
-.hito p, .hito a {
-  color: #585856;
-  line-height: 160%; }
-
-.hito a {
-  display: none;
-  text-decoration: none;
-  border-bottom: #FFFF81 solid 2px;
-  padding-bottom: 0.5px;
-  padding-top: 10%;
-  margin-bottom: 10%; }
-
 .hito {
   background-color: white;
   font-family: 'Roboto';
   font-size: 0.8em;
   transition: all 1s; }
-
-.hito:hover {
-  cursor: pointer; }
-
-.hito:hover > a {
-  display: block; }
-
-.hito:hover > p {
-  display: none; }
+  .hito:hover {
+    cursor: pointer; }
+    .hito:hover a {
+      display: block; }
+    .hito:hover p {
+      display: none; }
+  .hito a {
+    color: #585856;
+    line-height: 160%;
+    display: none;
+    text-decoration: none;
+    border-bottom: #FFFF81 solid 2px;
+    padding-bottom: 0.5px;
+    padding-top: 10%;
+    margin-bottom: 10%; }
+  .hito p {
+    color: #585856;
+    line-height: 160%; }
 
 .hito_vacio {
   background-color: transparent; }
@@ -1104,7 +1120,9 @@ svg {
   font-size: 1em;
   color: white;
   padding: 3px 10px 3px 10px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 0; }
 
 .t1 {
   background-color: #ff0040; }
