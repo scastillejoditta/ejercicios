@@ -357,13 +357,13 @@ h3 {
   border: none; }
 
 .img-primero {
-  background-image: url("assets/images/equipo1.jpg"); }
+  background-image: url("../assets/images/equipo1.jpg"); }
 
 .img-segundo {
-  background-image: url("assets/images/equipo2.jpg"); }
+  background-image: url("../assets/images/equipo2.jpg"); }
 
 .img-tercero {
-  background-image: url("assets/images/equipo3.jpg"); }
+  background-image: url("../assets/images/equipo3.jpg"); }
 
 /* -------------*/
 /* tarjetas */
@@ -1004,13 +1004,13 @@ svg {
   background-image: url("../assets/images/portada_guate.jpeg"); }
 
 .img-primero {
-  background-image: url("assets/images/equipo1.jpg"); }
+  background-image: url("../assets/images/equipo1.jpg"); }
 
 .img-segundo {
-  background-image: url("assets/images/equipo2.jpg"); }
+  background-image: url("../assets/images/equipo2.jpg"); }
 
 .img-tercero {
-  background-image: url("assets/images/equipo3.jpg"); }
+  background-image: url("../assets/images/equipo3.jpg"); }
 
 .gris {
   background-color: ADACAC;
